@@ -47,7 +47,9 @@ var container = {
       try {
         var rawMessages = require_method('./lang/' + lang);
         this._set(lang, rawMessages);
-      } catch (e) {}
+      } catch (e) {
+        this._set(lang, require('./lang/en'));
+      }
     }
   },
 
