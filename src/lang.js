@@ -44,7 +44,7 @@ var container = {
    */
   _load: function(lang) {
     if (!this.messages[lang]) {
-      const defaultLang = required('./lang/en'); // doing this cause react native hermes have issues with dynamic loading.
+      const defaultLang = require('./lang/en'); // doing this cause react native hermes have issues with dynamic loading.
       try {
         var rawMessages = require_method('./lang/' + lang);
         this._set(lang, rawMessages);
